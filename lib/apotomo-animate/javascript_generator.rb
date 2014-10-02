@@ -24,7 +24,7 @@ module Apotomo
 
         # FIXME If called repeatedly, then this will keep generating div wrappers.
         "#{element(id)}.replaceWith('#{escape(wrapped_markup)}');" +
-        "#{element("wrapper-#{id}")}.animate({ 'opacity': 1}, 400);"
+        "#{element("#{id}")}.parent().animate({ 'opacity': 1}, 400);"
       end
       def animate_id(id, markup)
         animate("##{id}", markup)
